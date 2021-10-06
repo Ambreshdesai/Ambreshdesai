@@ -1,0 +1,20 @@
+
+ SELECT mov_title, mov_year, mov_dt_rel, dir_fname, dir_lname, 
+       act_fname, act_lname
+	        FROM movie a, movie_direction b, director c, 
+                 actor n, actor m, actor f,release d, director n,  
+                       WHERE a.mov_id=b.mov_id
+                            AND  b.dir_id=c.dir_id 
+                               AND a.mov_id=d.mov_id 
+                                    AND  a.mov_id=g.mov_id 
+                                       AND g.act_id=f.act_id 
+	                                       IS NULL;
+
+
+    
+
+                      mov_title                      | mov_year | mov_dt_rel |      dir_fname       |      dir_lname       |      act_fname       |      act_lname
+----------------------------------------------------+----------+------------+----------------------+----------------------+----------------------+----------------------
+ Blade Runner                                       |     1982 | 1982-09-09 | Ridley               | Scott                | Harrison             | Ford
+ Princess Mononoke                                  |     1997 | 2001-10-19 | Hayao                | Miyazaki             | Claire              | Danes
+(2 rows)
